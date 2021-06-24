@@ -19,4 +19,12 @@ Try it out by inputting a review that you found online, or wrote yourself, and i
 ## Structure of notebooks
 
 
-# Executive summary
+## Executive summary
+
+### EDA and preprocessing
+
+### Modeling
+
+### Evaluation and interpretability
+
+### Deployment
