@@ -28,6 +28,7 @@ Here is a demo application of the default predictor: https://luke-adams.shinyapp
 <details>
   <summary>Show/hide</summary>
   <br>
+  For input after I add files to git
   
 </details>
 
@@ -37,6 +38,7 @@ Here is a demo application of the default predictor: https://luke-adams.shinyapp
 <details>
   <summary>Show/hide</summary>
   <br>
+  For input after I add files to git
   
 </details>
 
@@ -45,6 +47,7 @@ Here is a demo application of the default predictor: https://luke-adams.shinyapp
 <details>
   <summary>Show/hide</summary>
   <br>
+  For input after I add files to git
   
 </details>
 
