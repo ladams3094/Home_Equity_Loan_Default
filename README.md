@@ -17,8 +17,10 @@ Try it out by inputting a review that you found online, or wrote yourself, and i
   2. [Technologies used](##Technologies-used)
   3. [Structure of notebooks](##Structure-of-notebooks)
   4. [Executive summary](##Executive-summary)<br>
-      4.1 [EDA and preprocessing](##EDA-and-preprocessing)
-      4.2
+      4.1 [EDA and preprocessing](###EDA-and-preprocessing)<br>
+      4.2 [Modeling](###Modeling)<br>
+      4.3 [Evaluation and interpretability](###Evaluation-and-interpretability)<br>
+      4.4 [Deployment](###Deployment)
   
 </details>
 
