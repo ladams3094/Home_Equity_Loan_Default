@@ -9,6 +9,8 @@ Try it out by inputting a review that you found online, or wrote yourself, and i
 
 ## Table of contents
 
+> Show/hide 
+
 1. [File descriptions](##File-descriptions)
 
 
