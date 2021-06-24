@@ -13,14 +13,14 @@ Try it out by inputting a review that you found online, or wrote yourself, and i
   <summary>Show/hide</summary>
   <br>
   
-  1. [File descriptions](##file-descriptions)
-  2. [Technologies used](##technologies-used)
-  3. [Structure of notebooks](##structure-of-notebooks)
-  4. [Executive summary](##executive-summary)<br>
-      4.1 [EDA and preprocessing](###eda-and-preprocessing)<br>
-      4.2 [Modeling](###modeling)<br>
-      4.3 [Evaluation and interpretability](###evaluation-and-interpretability)<br>
-      4.4 [Deployment](###deployment)
+  1. [File descriptions](#file-descriptions)
+  2. [Technologies used](#technologies-used)
+  3. [Structure of notebooks](#structure-of-notebooks)
+  4. [Executive summary](#executive-summary)<br>
+      4.1 [EDA and preprocessing](#eda-and-preprocessing)<br>
+      4.2 [Modeling](#modeling)<br>
+      4.3 [Evaluation and interpretability](#evaluation-and-interpretability)<br>
+      4.4 [Deployment](#deployment)
   
 </details>
 
