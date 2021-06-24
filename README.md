@@ -9,7 +9,7 @@ Try it out by inputting a review that you found online, or wrote yourself, and i
 
 ## Table of contents
 
-<details>
+<details open>
   <summary>Show/hide</summary>
   <br>
   
