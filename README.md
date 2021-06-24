@@ -1,8 +1,6 @@
 # Home Equity Loan Default Prediction & Interpretation
 
-Here is a demo application of the default predictor: https:
-
-Try it out by inputting a review that you found online, or wrote yourself, and it will clasify the review title, the review, or both with a score between 1-5.
+Here is a demo application of the default predictor: https://luke-adams.shinyapps.io/hmeq-shiny-app/
 
 ## Business case
 
@@ -27,19 +25,59 @@ Try it out by inputting a review that you found online, or wrote yourself, and i
 
 ## File descriptions
 
+<details>
+  <summary>Show/hide</summary>
+  <br>
+  
+</details>
+
 
 ## Technologies used
 
+<details>
+  <summary>Show/hide</summary>
+  <br>
+  
+</details>
 
 ## Structure of notebooks
 
+<details>
+  <summary>Show/hide</summary>
+  <br>
+  
+</details>
 
 ## Executive summary
 
 ### EDA and preprocessing
 
+<details open>
+  <summary>Show/hide</summary>
+  <br>
+  
+</details>
+
 ### Modeling
+
+<details open>
+  <summary>Show/hide</summary>
+  <br>
+  
+</details>
 
 ### Evaluation and interpretability
 
+<details open>
+  <summary>Show/hide</summary>
+  <br>
+  
+</details>
+
 ### Deployment
+
+<details open>
+  <summary>Show/hide</summary>
+  <br>
+  
+</details>
