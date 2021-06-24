@@ -1,7 +1,4 @@
 ---
-title: "Exploring one Variable"
-author: "Shankar"
-date: "October 1, 2016"
 output: rmarkdown::github_document
 --- 
 
