@@ -9,7 +9,7 @@ Try it out by inputting a review that you found online, or wrote yourself, and i
 
 ## Table of contents
 
-1. File descriptions(##File-descriptions)
+1. [File descriptions](##File-descriptions)
 
 
 ## File descriptions
