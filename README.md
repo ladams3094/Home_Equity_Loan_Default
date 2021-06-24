@@ -10,10 +10,11 @@ Try it out by inputting a review that you found online, or wrote yourself, and i
 ## Table of contents
 
 <details>
-  <summary>Show/hide</summary>
+  <summary>Show/hide</summary><br>
+  
 
-  <br>
   1. [File descriptions](##File-descriptions)
+  
 </details>
 
 
