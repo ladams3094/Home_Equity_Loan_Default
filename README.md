@@ -7,7 +7,16 @@ Try it out by inputting a review that you found online, or wrote yourself, and i
 ## Business case
 
 
-
 ## Table of contents
 
 
+## File descriptions
+
+
+## Technologies used
+
+
+## Structure of notebooks
+
+
+# Executive summary
