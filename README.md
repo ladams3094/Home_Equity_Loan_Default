@@ -14,6 +14,11 @@ Try it out by inputting a review that you found online, or wrote yourself, and i
   <br>
   
   1. [File descriptions](##File-descriptions)
+  2. [Technologies used](##Technologies-used)
+  3. [Structure of notebooks](##Structure-of-notebooks)
+  4. [Executive summary](##Executive-summary)
+      4.1 [EDA and preprocessing](##EDA-and-preprocessing)
+      4.2
   
 </details>
 
