@@ -2,7 +2,7 @@
 title: 'EDA and preprocessing'
 author: 'Luke Adams'
 date: '2021-06-24'
-output: rmarkdown::github_document
+# output: rmarkdown::github_document
 --- 
 
 # Setup
