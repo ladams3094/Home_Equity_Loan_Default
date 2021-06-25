@@ -2,7 +2,7 @@
 title: "Untitled"
 author: "Luke Adams"
 date: "6/24/2021"
-output: html_document
+output: rmarkdown::github_document
 ---
 
 ```{r setup, include=FALSE}
