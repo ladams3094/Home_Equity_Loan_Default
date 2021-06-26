@@ -31,3 +31,5 @@ janitor
 lattice
 caret
 visdat
+matrixStats
+ggmosaic
