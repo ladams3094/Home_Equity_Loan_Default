@@ -78,3 +78,9 @@ data_02 <-
   modify_at(c('default', 'loan_purpose', 'job'), as.factor) %>% 
   mutate(default = recode(default, `1` = 'yes', `0` = 'no'))
 ```
+
+Save model ready data
+
+```{r}
+# write_csv(data_02, here('data', 'hmeq-tidy.csv'))
+```
