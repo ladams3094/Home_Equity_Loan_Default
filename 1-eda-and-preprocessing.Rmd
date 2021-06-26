@@ -5,11 +5,9 @@ date: '2021-06-24'
 output: rmarkdown::github_document
 ---
 
-# EDA and Preprocessing
-
 **Setup**
 
-```{r setup, include=FALSE}
+```{r setup, include=TRUE, message=FALSE}
 # setup
 library(knitr)
 knitr::opts_chunk$set(cache = TRUE, cache.lazy = FALSE, warning = FALSE,
@@ -30,6 +28,10 @@ library(janitor)
 
 library(caret)     # nearZeroVar
 library(visdat)
+
+# mosaic plot
+library(matrixStats)
+library(ggmosaic)
 ```
 
 **Read data**
@@ -84,5 +86,183 @@ data_02 <-
 Save model ready data
 
 ```{r}
+glimpse(data_02, width = 90)
+```
+
+```{r}
 # write_csv(data_02, here('data', 'hmeq-tidy.csv'))
+```
+
+**Detailed view**
+
+-   1,189 / 5,960 loans defaulted (\~20%)
+
+-   **loan_purpose** has 2 unique values, **job** has 6 unique values
+
+-   Missing values are present in all variables except **default** and **loan_amt** with our lowest completion rate being **debt_to_income** at 78.7%
+
+-   Numeric variables appear to be right skewed based off histograms
+
+-   All numerics are greater than one and maximum values appear reasonable for each variable
+
+```{r, }
+skim(data_02) %>% 
+  knit_print()
+```
+
+**Categoricals**
+
+**loan_purpose** has 2 unique values - home improvement and debt consolidation
+
+```{r}
+data_02 %>% 
+  select(loan_purpose) %>% 
+  unique()
+```
+
+**job** has 6 uniques - office, sales, manager, executive, self-employed, other
+
+```{r}
+data_02 %>% 
+  select(job) %>% 
+  unique()
+```
+
+**Zero Variance Predictors**
+
+No near zero variance predictors to be removed
+
+```{r}
+data_02 %>% 
+  select_if(is.numeric) %>% 
+  nearZeroVar(saveMetrics = TRUE) %>%
+  rownames_to_column() 
+```
+
+## Visualizations
+
+### Missing values
+
+Logistic regression requires missing values to either be dropped or imputed
+
+For categorical - we can either create a new category called "unknown" or can impute NAs - we'll come back to this
+
+-   No clear or obvious pattern of missing values
+
+-   Numeric missing values we will preprocess with a simple median or mean imputation as these are computationally efficient (may be worth it to compare finals results to models preprocessed with more advanced imputation methods)
+
+```{r}
+vis_dat(data_02)
+```
+
+### Response
+
+-   Imbalanced response as we noticed earlier
+
+```{r}
+data_02 %>% 
+  ggplot(aes(x = default)) +
+  geom_bar()
+```
+
+```{r}
+data_02 %>%
+  group_by(default) %>%
+  summarize(N = n(), pct = N / nrow(data_02))
+```
+
+### Features
+
+#### Categorical
+
+**loan_purpose, job**
+
+```{r}
+# loan_purpose category proportions
+data_02 %>%
+  tabyl(loan_purpose)
+```
+
+```{r}
+# job category proportions
+data_02 %>%
+  tabyl(job)
+```
+
+#### Numeric
+
+-   Numerics are right-skewed
+
+```{r}
+# distributions
+data_02 %>%
+  select(-default) %>%
+  keep(is.numeric) %>%
+  gather() %>%
+  ggplot(aes(value)) +
+    facet_wrap(~key, scales = 'free') +
+    geom_density()
+```
+
+-   Outliers seem to be present (based on boxplot results)
+
+```{r}
+data_02 %>%
+  select(-job, -loan_purpose, -default) %>%
+  gather() %>%
+  ggplot(aes(value)) +
+    facet_wrap(~key, scales = 'free') +
+    geom_boxplot()
+```
+
+#### Relationships
+
+**loan_purpose, job x default**
+
+Going to create a new category called unknown for each missing value - might be worth it to compare the final results to a model with imputed values (mode, KNN, bagged trees, etc.)
+
+```{r}
+data_02 %>% 
+  select(default, loan_purpose, job) %>% 
+  pivot_longer(loan_purpose:job) %>% 
+  ggplot(aes(y = value, fill = default)) + 
+  geom_bar(position = 'fill') +
+  facet_wrap(vars(name), scales = 'free', ncol = 2) +
+  labs(x = NULL, y = NULL, fill = NULL)
+```
+
+**loan_purpose x job**
+
+```{r}
+data_02 %>% 
+  ggplot() + 
+  geom_mosaic(aes(x = product(job, loan_purpose), fill = job))
+```
+
+**numeric x default**
+
+```{r}
+temp_2 <- data_02 %>%
+  pivot_longer(-c(job, loan_purpose, default), names_to = 'variable')
+
+ggplot(temp_2) +
+ geom_boxplot(aes(x = factor(default), y = value)) +
+ facet_wrap(~variable, scales = "free")
+```
+
+```{r}
+data_02 %>% 
+  select(default, loan_amt, mort_due, prop_val, num_derog, num_delinq_credit_lines, 
+         debt_to_income, credit_line_age_months, num_credit_inq, num_credit_lines) %>% 
+  ggpairs(columns = 2:10, aes(color = default, alpha = 0.5))
+```
+
+-   **mort_due** and **prop_val** have a correlation of 0.88, this might cause some instability in our logistic regression
+
+-   this wouldn't be an issue if our objective was purely predictive but we are interested in interpretability as well
+
+```{r}
+data_02 %>% 
+  select_if(is.numeric) %>% 
+  ggcorr(label = TRUE, hjust = 0.89, label_round = 2)
 ```
