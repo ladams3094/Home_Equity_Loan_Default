@@ -90,7 +90,7 @@ glimpse(data_02, width = 90)
 ```
 
 ```{r}
-# write_csv(data_02, here('data', 'hmeq-tidy.csv'))
+write_csv(data_02, here('data', 'hmeq-tidy.csv'))
 ```
 
 **Detailed view**
