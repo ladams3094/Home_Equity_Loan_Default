@@ -18,16 +18,14 @@ library(tidymodels)
 theme_set(theme_minimal())
 update_geom_defaults('rect', list(fill = 'midnightblue', alpha = 0.8))
 
-library(DALEXtra)
-library(lime)
-library(GGally)     ## ggcor()
+library(GGally)     ## ggcorr()
 
 library(here)
 library(skimr)
 library(janitor)
 
 library(caret)     # nearZeroVar
-library(visdat)
+library(visdat)    # NAs
 
 # mosaic plot
 library(matrixStats)
@@ -158,6 +156,8 @@ vis_dat(data_02)
 ### Response
 
 -   Imbalanced response as we noticed earlier
+
+-   Going to compare model trained with subsampling to see if we can combat this class imbalance and achieve better predictive accuracy
 
 ```{r}
 data_02 %>% 

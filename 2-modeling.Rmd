@@ -1,30 +1,110 @@
 ---
-title: "Untitled"
+title: "Modeling"
 author: "Luke Adams"
 date: "6/24/2021"
 output: rmarkdown::github_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+**Setup**
+
+```{r setup, include=TRUE, message=FALSE}
+# setup
+library(knitr)
+knitr::opts_chunk$set(cache = TRUE, cache.lazy = FALSE, warning = FALSE,
+                      message = FALSE, echo = TRUE, dpi = 180, 
+                      fig.width = 10, fig.height = 6)
+theme_set(theme_minimal())
+
+library(tidyverse)
+library(tidymodels)
+
+library(themis)     # step_smote()
 ```
 
-## R Markdown
+**Load data**
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+```{r}
+# load data and convert to correct data types
+hmeq_data <- 
+  read_csv(here('data', 'hmeq-data-tidy.csv')) %>% 
+  modify_at(c('default', 'loan_purpose', 'job'), as.factor)
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+glimpse(hmeq_data, width = 85)
 ```
 
-## Including Plots
+# Split data
 
-You can also embed plots, for example:
+-   Stratified random sample split into a train, test set (3:1)
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+-   Resample the training set using repeated 10-fold cross-validation
+
+```{r}
+set.seed(9007)
+hmeq_split <- initial_split(hmeq_data, strata = default)
+hmeq_train <- training(hmeq_split)
+hmeq_test <- testing(hmeq_split)
+
+set.seed(9008)
+hmeq_folds <- vfold_cv(hmeq_train, strata = default, repeats = 5)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+# Recipe (preprocess)
+
+Feature selection
+
+-   drop correlated predictor
+
+Subsampling
+
+-   smote
+
+Missing values
+
+-   median for numeric
+
+-   new category for nominal
+
+Skewness
+
+-   could transform variables but that would inhibit interpretability
+
+Dummy variables
+
+-   One hot encoding for nominal predictors
+
+Feature engineering
+
+-   interaction terms may increase performance but would increase complexity
+
+```{r}
+hmeq_rec <- 
+  recipe(default ~ ., data = hmeq_train) %>% 
+  step_meanimpute(all_numeric()) %>%
+  step_unknown(all_nominal(), -default) %>%
+  step_corr(all_predictors(), threshold = 0.85) %>% 
+  step_dummy(loan_purpose, job) %>% 
+  step_smote(default)
+```
+
+# Model specification
+
+Going to train a basic logistic regression model for simplicity, efficiency and interpretability
+
+```{r}
+# model
+(log_reg_spec <-
+  logistic_reg() %>% 
+  set_engine('glm'))
+```
+
+# Create workflow
+
+Crucial step for keep preprocessing consistent when resampling model
+
+```{r}
+# workflow
+(log_reg_wflow <- 
+  workflow() %>% 
+  add_recipe(hmeq_rec) %>% 
+  add_model(log_reg_spec))
+```
