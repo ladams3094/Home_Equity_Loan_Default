@@ -38,7 +38,7 @@ Here is a demo application of the default predictor: https://luke-adams.shinyapp
 <details>
   <summary>Show/hide</summary>
   <br>
-  - tidyverse <br>
+  * tidyverse <br>
   - tidymodels
   - skimr
   - janitor
