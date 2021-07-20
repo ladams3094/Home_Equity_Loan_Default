@@ -42,6 +42,7 @@ Here is a demo application of the default predictor: https://luke-adams.shinyapp
   * tidymodels
   * skimr
   * janitor
+ * HELLO
   
 </details>
 
