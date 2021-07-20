@@ -75,6 +75,9 @@ Here is a demo application of the default predictor: https://luke-adams.shinyapp
   <summary>Show/hide</summary>
   <br>
   
+  https://ema.drwhy.ai/summaryInstanceLevel.html
+  https://ema.drwhy.ai/summaryModelLevel.html
+  
 </details>
 
 ### Deployment
