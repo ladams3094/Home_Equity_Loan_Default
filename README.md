@@ -38,6 +38,8 @@ Here is a demo application of the default predictor: https://luke-adams.shinyapp
 <details>
   <summary>Show/hide</summary>
   <br>
+
+R libraries: <br>
   
 * tidyverse <br>
 * tidymodels <br>
