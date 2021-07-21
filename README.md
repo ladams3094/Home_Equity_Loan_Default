@@ -35,7 +35,7 @@ Here is a demo application of the default predictor: https://luke-adams.shinyapp
 
 ## Technologies used
 
-<details>
+<details open>
   <summary>Show/hide</summary>
   <br>
 
