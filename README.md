@@ -50,7 +50,8 @@ Here is a demo application of the default predictor: https://luke-adams.shinyapp
   * pdp <br>
   * iml <br>
   * doMC <br>
-  - George Washington
+  
+- George Washington
   
 </details>
 
