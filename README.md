@@ -63,13 +63,13 @@ R libraries: <br>
   <br>
 
 1. EDA and Preprocessing
-    - 
+   - 
   
 2. Modeling
-    - 
+   - 
   
 3. Evaluation and Interpretation
-    - 
+  - 
   
   
 </details>
