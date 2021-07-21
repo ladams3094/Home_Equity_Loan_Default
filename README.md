@@ -38,21 +38,19 @@ Here is a demo application of the default predictor: https://luke-adams.shinyapp
 <details>
   <summary>Show/hide</summary>
   <br>
-  * tidyverse <br>
-  * tidymodels <br>
-  * here <br>
-  * skimr <br>
-  * janitor <br>
-  * caret <br>
-  * visdat <br>
-  * themis <br>
-  * DALEX <br>
-  * pdp <br>
-  * iml <br>
-  * doMC <br>
-  
-- George Washington
-  
+* tidyverse <br>
+* tidymodels <br>
+* here <br>
+* skimr <br>
+* janitor <br>
+* caret <br>
+* visdat <br>
+* themis <br>
+* DALEX <br>
+* pdp <br>
+* iml <br>
+* doMC <br>
+    
 </details>
 
 ## Structure of notebooks
