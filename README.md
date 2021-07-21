@@ -1,7 +1,5 @@
 # Home Equity Loan Default Prediction & Interpretation
 
-- George Washington
-
 Here is a demo application of the default predictor: https://luke-adams.shinyapps.io/hmeq-shiny-app/
 
 ## Business case
@@ -52,6 +50,7 @@ Here is a demo application of the default predictor: https://luke-adams.shinyapp
   * pdp <br>
   * iml <br>
   * doMC <br>
+  - George Washington
   
 </details>
 
