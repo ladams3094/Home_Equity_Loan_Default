@@ -39,11 +39,9 @@ Here is a demo application of the default predictor: https://luke-adams.shinyapp
   <summary>Show/hide</summary>
   <br>
   
-- George Washington
-  
-- tidyverse <br>
-- tidymodels <br>
-- here <br>
+* tidyverse <br>
+* tidymodels <br>
+* here <br>
 * skimr <br>
 * janitor <br>
 * caret <br>
@@ -53,8 +51,6 @@ Here is a demo application of the default predictor: https://luke-adams.shinyapp
 * pdp <br>
 * iml <br>
 * doMC <br>
-
-- George Washington
   
 </details>
 
