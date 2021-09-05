@@ -56,7 +56,7 @@ R libraries: <br>
   
 </details>
 
-## Structure of notebooks
+## Notebook structure
 
 <details open>
   <summary>Show/hide</summary>
