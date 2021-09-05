@@ -42,17 +42,17 @@ Here is a demo application of the default predictor: https://luke-adams.shinyapp
 R libraries: <br>
   
 - **tidyverse** <br>
-- tidymodels <br>
-- here <br>
-- skimr <br>
-- janitor <br>
-- caret <br>
-- visdat <br>
-- themis <br>
-- DALEX <br>
-- pdp <br>
-- iml <br>
-- doMC <br>
+- **tidymodels** <br>
+- **here** <br>
+- **skimr** <br>
+- **janitor** <br>
+- **caret** <br>
+- **visdat** <br>
+- **themis** <br>
+- **DALEX** <br>
+- **pdp** <br>
+- **iml** <br>
+- **doMC** <br>
   
 </details>
 
