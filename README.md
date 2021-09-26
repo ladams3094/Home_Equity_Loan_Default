@@ -13,7 +13,7 @@ Here is a demo application of the default predictor: https://luke-adams.shinyapp
   
   1. [File descriptions](#file-descriptions)
   2. [Technologies used](#technologies-used)
-  3. [Structure](#structure-of-notebooks)
+  3. [Structure](#notebook-structure)
   4. [Executive summary](#executive-summary)<br>
       4.1 [EDA and preprocessing](#eda-and-preprocessing)<br>
       4.2 [Modeling](#modeling)<br>
