@@ -63,7 +63,12 @@ R libraries: <br>
   <br>
 
 1. EDA and Preprocessing
-   - ...
+   - 1.1 Imports
+   - 1.2 Glimpse data
+   - 1.3 Skim data
+   - 1.4 Visualize data
+    - 1.4.1 Missing values
+    - 1.4.2 Response variable
   
 2. Modeling & Hyperparameter Tuning
    - ...
