@@ -67,8 +67,8 @@ R libraries: <br>
    - 1.2 Glimpse data
    - 1.3 Skim data
    - 1.4 Visualize data
-    - 1.4.1 Missing values
-    - 1.4.2 Response variable
+     - 1.4.1 Missing values
+     - 1.4.2 Response variable
   
 2. Modeling & Hyperparameter Tuning
    - ...
