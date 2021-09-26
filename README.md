@@ -104,6 +104,9 @@ R libraries: <br>
      - 3.4.2 Shapley values
      - 3.4.3 Ceteris-paribus profiles
   
+4. Depoloyment
+   - 4.1 Shiny Application
+  
   
 </details>
 
