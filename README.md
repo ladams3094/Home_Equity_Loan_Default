@@ -4,6 +4,7 @@ Here is a demo application of the default predictor: https://luke-adams.shinyapp
 
 ## Business case
 
+In the financial industry, simplicity and transparency play a crucial role in decision-making models. Among such models are those deployed by banks, mortgage companies, and credit card companies that determine whether or not an individual will be approved for a loan, known as credit scoring models. There is a tradeoff between simple, transparent models and more flexible, opaque, and robust models in the machine learning landscape. This project aims to bridge that gap and deliver a loan default classification model that is both highly accurate and interpretable.
 
 ## Table of contents
 
