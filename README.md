@@ -36,7 +36,7 @@ In the financial industry, simplicity and transparency play a crucial role in de
 
 ## Technologies used
 
-<details open>
+<details>
   <summary>Show/hide</summary>
   <br>
 
@@ -59,7 +59,7 @@ R libraries: <br>
 
 ## Notebook structure
 
-<details open>
+<details>
   <summary>Show/hide</summary>
   <br>
 
