@@ -62,7 +62,7 @@ R libraries: <br>
   <summary>Show/hide</summary>
   <br>
 
-1. EDA and Preprocessing
+1. **EDA and Preprocessing**
    - 1.1 Imports
    - 1.2 Glimpse Data
    - 1.3 Skim Data
@@ -72,7 +72,7 @@ R libraries: <br>
      - 1.4.3 Feature variables
      - 1.4.4 Variable relationships
   
-2. Modeling & Hyperparameter Tuning
+2. **Modeling & Hyperparameter Tuning**
    - 2.1 Imports
    - 2.2 Train / Test Split
    - 2.3 Performance Metrics
@@ -92,7 +92,7 @@ R libraries: <br>
      - 2.5.7 Finalize model
      - 2.5.8 Save model
   
-3. Evaluation and Interpretation
+3. **Evaluation and Interpretation**
    - 3.1 Imports
    - 3.2 Performance 
      - 3.2.1 Confusion matrix
@@ -104,7 +104,7 @@ R libraries: <br>
      - 3.4.2 Shapley values
      - 3.4.3 Ceteris-paribus profiles
   
-4. Depoloyment
+4. **Depoloyment**
    - 4.1 Shiny Application
   
   
