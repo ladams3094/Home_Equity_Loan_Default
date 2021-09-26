@@ -82,7 +82,7 @@ R libraries: <br>
      - 2.4.3 Create workflow
      - 2.4.4 Fit model
      - 2.4.5 Performance
-  - 2.5 Random forest
+   - 2.5 Random forest
      - 2.5.1 Recipe
      - 2.5.2 Model specification
      - 2.5.3 Create workflow
