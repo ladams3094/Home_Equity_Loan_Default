@@ -26,10 +26,10 @@ In the financial industry, simplicity and transparency play a crucial role in de
 
 ## File descriptions
 
-<details>
+<details open>
   <summary>Show/hide</summary>
   <br>
-  For input after I add files to git
+    - For input after I add files to git
   
 </details>
 
