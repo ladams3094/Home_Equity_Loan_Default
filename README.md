@@ -69,6 +69,8 @@ R libraries: <br>
    - 1.4 Visualize data
      - 1.4.1 Missing values
      - 1.4.2 Response variable
+     - 1.4.3 Feature variables
+     - 1.4.4 Variable relationships
   
 2. Modeling & Hyperparameter Tuning
    - ...
