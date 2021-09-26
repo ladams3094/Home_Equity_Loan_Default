@@ -73,7 +73,25 @@ R libraries: <br>
      - 1.4.4 Variable relationships
   
 2. Modeling & Hyperparameter Tuning
-   - ...
+   - 2.1 Imports
+   - 2.2 Train / test split
+   - 2.3 Performance metrics
+   - 2.4 Logistic regression
+     - 2.4.1 Recipe
+     - 2.4.2 Model specification
+     - 2.4.3 Create workflow
+     - 2.4.4 Fit model
+     - 2.4.5 Performance
+  - 2.5 Random forest
+     - 2.5.1 Recipe
+     - 2.5.2 Model specification
+     - 2.5.3 Create workflow
+     - 2.5.4 Initial tune
+     - 2.5.5 Fine tune
+     - 2.5.6 Model selection
+     - 2.5.7 Finalize model
+     - 2.5.8 Performance
+     - 2.5.9 Save model
   
 3. Evaluation and Interpretation
    - ...
